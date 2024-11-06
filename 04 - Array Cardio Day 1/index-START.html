@@ -38,29 +38,64 @@
     
     // Array.prototype.filter()
     // 1. Filter the list of inventors for those who were born in the 1500's
+    const inv1500 = inventors.filter(person => (person.year >= 1500) && (person.year < 1600));
+    // console.table(inv1500);
 
     // Array.prototype.map()
     // 2. Give us an array of the inventors first and last names
+    // const names = inventors.slice().map((name) => `${name.first} ${name.last}`);
+    // console.table(names);
 
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
+    // const sortedInv = inventors.slice().sort((a, b) => (a.year-b.year));
+    // console.table(sortedInv)
 
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live all together?
+    // const livedTotal = inventors.slice().reduce((acc, inventor) => {
+    //     return acc + (inventor.passed - inventor.year);
+    // }, 0);
+    // console.log(livedTotal);
+
 
     // 5. Sort the inventors by years lived
+    // const inventorSorted = inventors.slice().sort((a, b) => (a.passed-a.year) - (b.passed-b.year))
+    // console.log(inventorSorted);
 
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
-
+    // const category = document.querySelector(".mw-category");
+    // const links = [...category.querySelectorAll("a")];
+    // const hereSearch = links.map((ele) => {
+    //     return ele.textContent;
+    // });
+    // const finalAnswer = hereSearch.filter((ele) => {
+    //     const condition = ele.search("de");
+    //     return !(condition === -1)
+    // });
+    // console.log(finalAnswer);
 
     // 7. sort Exercise
     // Sort the people alphabetically by last name
+    // const lastNames = people
+    //     .slice()
+    //     .map((person) => person.split(", ").reverse())
+    //     .sort()
+    //     .map((person) => person.reverse().join(", "));
+    // console.log(lastNames);
 
     // 8. Reduce Exercise
     // Sum up the instances of each of these
-    const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
-
+    // const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+    // // Your code goes here
+    // // const newData = {};
+    // // data.map((vehicle) => Object.keys(newData).includes(vehicle) ? newData[vehicle] += 1 : newData[vehicle] = 1);
+    // const newData = data.slice().reduce((acc, vehicle) => {
+    //     acc[vehicle] = (acc[vehicle] || 0) + 1;
+    //     return acc;
+    // },{})
+    // console.log(newData)
   </script>
 </body>
 </html>
